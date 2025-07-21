@@ -2,6 +2,8 @@
 
 A comprehensive MCP (Model Context Protocol) toolset for Java development, providing code generation, parsing, migration, and analysis capabilities.
 
+**Now using the official MCP Java SDK 0.10.0** for standard protocol compliance.
+
 ## Features
 
 ### MCP Tools
@@ -76,13 +78,27 @@ java -jar target/remodern-java-1.0.0-SNAPSHOT.jar run bytecode-tool \
 
 ### MCP Server
 
-Start the MCP server:
+Start the MCP server using the official MCP Java SDK:
 
 ```bash
-java -cp target/remodern-java-1.0.0-SNAPSHOT.jar com.phodal.remodern.mcp.ReModernMcpServer
+java -jar target/remodern-java-1.0.0-SNAPSHOT-mcp-server.jar
 ```
 
-The server will start and listen for MCP protocol messages via STDIO.
+The server implements the standard MCP protocol (2024-11-05) using the official Java SDK and listens for messages via STDIO.
+
+#### Testing the MCP Server
+
+You can test the server using the following JSON-RPC commands:
+
+**Initialize:**
+```json
+{"id":1,"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{"experimental":{},"sampling":{}},"clientInfo":{"name":"test-client","version":"1.0.0"}},"jsonrpc":"2.0"}
+```
+
+**List Tools:**
+```json
+{"id":2,"method":"tools/list","params":{},"jsonrpc":"2.0"}
+```
 
 ## Tool Documentation
 

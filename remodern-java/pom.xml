@@ -170,7 +170,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.phodal.remodern.mcp.ReModernMcpServer</mainClass> <!-- 替换成你自己的主类 -->
+                            <mainClass>com.phodal.remodern.mcp.OfficialMcpServer</mainClass> <!-- 替换成你自己的主类 -->
                         </manifest>
                     </archive>
                 </configuration>
@@ -223,7 +223,7 @@
                             <goal>repackage</goal>
                         </goals>
                         <configuration>
-                            <mainClass>com.phodal.remodern.mcp.ReModernMcpServer</mainClass>
+                            <mainClass>com.phodal.remodern.mcp.OfficialMcpServer</mainClass>
                             <classifier>mcp-server</classifier>
                         </configuration>
                     </execution>

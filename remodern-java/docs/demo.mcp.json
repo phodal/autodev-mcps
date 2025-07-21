@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "remodernJava": {
+      "command": "java",
+      "args": [
+        "-jar",
+        "/Volumes/source/archlift/archlift/remodern-java/target/remodern-java-1.0.0-SNAPSHOT-mcp-server.jar"
+      ]
+    }
+  }
+}
